@@ -7,6 +7,7 @@ class Country {
   String? capital;
   String? currency;
   List<String>? languages;
+  List<int>? flag;
 
   Country(
       {this.id,
@@ -16,7 +17,8 @@ class Country {
       this.continent,
       this.capital,
       this.currency,
-      this.languages});
+      this.languages,
+      this.flag});
 
   Country.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -27,6 +29,7 @@ class Country {
     capital = json['capital'];
     currency = json['currency'];
     languages = json['languages'].cast<String>();
+    flag = json['flag'].cast<int>();
   }
 
   Map<String, dynamic> toJson() {
@@ -39,6 +42,7 @@ class Country {
     data['capital'] = capital;
     data['currency'] = currency;
     data['languages'] = languages;
+    data['flag'] = flag;
     return data;
   }
 }
