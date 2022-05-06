@@ -1,4 +1,4 @@
-# country_phone_codes
+# country_informations
 
 A new Flutter project.
 
